@@ -1,0 +1,21 @@
+extends default
+
+block primary_content
+   - var modules = _.chain(_.keys(contents.documentation)).map(function(item) { 
+   -   return item 
+   - }).compact().sortBy(function(item) {
+   -   return item 
+   - }).value()
+
+   each module in modules
+      h2= module
+      - var functions = _.chain(contents.documentation[module]).map(function(item) {
+      -   return item
+      - }).compact().sortBy(function(item) {
+      -  return item.title
+      - }).value();
+      ul
+         each func in functions
+            li
+               a(href=locals.url+'#{func.url}') #{func.title}
+               

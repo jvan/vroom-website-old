@@ -1,0 +1,11 @@
+.navbar.navbar-fixed-top.navbar-inverse
+   .navbar-inner
+      .container
+         a.brand(href=locals.url+'/') home
+         ul.nav
+            nav_links = [ 'download', 'documentation', 'about', 'demos' ]
+            each link in nav_links
+               if page.title == link
+                  li.active: a(href=locals.url+'/#{link}.html') #{link}
+               else
+                  li: a(href=locals.url+'/#{link}.html') #{link}

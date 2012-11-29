@@ -1,0 +1,118 @@
+title: generators
+template: function.jade
+description: module
+
+p(lead). Utility functions and generators.
+
+
+*functions*
+
+"random_vertex":#random_vertex
+"random_color":#random_color
+
+*generators*
+
+"random_vertex_generator":#random_vertex_generator
+"random_color_generator":#random_color_generator
+
+<div id="random_vertex">
+h2. random_vertex
+
+Return a random [x,y,z] value in the range (start, stop).
+
+h3. syntax
+
+bc(python).
+random_vertex(start, stop)
+
+h3. parameters
+
+| *start* | minimum vertex value |
+| *end*   | maximum vertex value |
+
+h3. returns
+
+3-element @list@ (x, y, z)
+</div>
+
+
+
+<div id="random_color">
+h2(#random_color). random_color
+
+Return a random [r,g,b] value in the range (0, 1).
+
+h3. syntax
+
+bc(python).
+random_color()
+
+h3. returns 
+
+3-element @list@ (r, g, b)
+</div>
+
+
+
+<div id="random_vertex_generator">
+h2. random_vertex_generator
+
+Generator for creating n random vertices.
+
+Returns a generator that creates vertex values randomly distributed inside a cube. For example, the following code will generate 10,000 random vertices with values from -100.0 to 100.0:
+
+h3. syntax
+
+bc(python).
+random_vertex_generator(n, start=-1.0, stop=1.0)
+
+h3. parameters
+
+| *n*     | number of vertices | 
+| *start* | minimum value for vertex elements |
+| *stop*  | maximum value for vertex elements |
+   
+h3. returns
+
+@generator@ object
+
+h3. examples
+ 
+bc(python).
+vertices = list(random_vertex_generator(10000, -100.0, 100.0))
+</div>
+
+
+<div id="random_color_generator">
+h2. random_color_generator
+
+Generator for creating n random color values.
+
+Returns a generator that creates random color values. Both RGB and greyscale colors can be returned depending on the type specified.
+
+h3. syntax 
+
+bc(python).
+random_color_generator(n, type='rgb')
+
+h3. parameterns
+
+| *n*    | number of color values |
+| *type* | type of color values (must be either "RGB" or "greyscale") |
+
+h3. returns
+
+@generator@ object
+
+h3. examples 
+
+To generate 500 RGB color values:
+
+bc(python).
+colors = list(random_color_generator(500))
+
+To generate 500 greyscale values:
+   
+bc(python).
+colors = list(random_color_generator(500, type='greyscale'))
+</div>

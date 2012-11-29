@@ -1,0 +1,9 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "vroom"
+  },
+  "plugins": [
+      "wintersmith-textile"
+  ]
+}

@@ -1,0 +1,17 @@
+extends default
+
+block primary_content
+   - var posts = _.chain(contents.posts._.directories).map(function(item) {
+   -   return item.index
+   - }).compact().sortBy(function(item) {
+   -   return -item.date
+   - }).first(5).value()
+   h2 news
+   each post in posts
+      article.post
+         header
+            h2: a(href=locals.url+'/'+post.url)= post.title
+
+         section.content!= post.intro
+
+

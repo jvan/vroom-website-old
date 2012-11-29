@@ -1,0 +1,10 @@
+extends default
+
+block header
+   .hero-unit
+      h1= page.title
+         br
+         small= page.metadata.description
+
+block primary_content
+   != page.html

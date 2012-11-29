@@ -1,0 +1,13 @@
+extends base
+
+block header
+   .hero-unit
+      h1= page.title
+
+block content
+   .container
+      .row
+         .span7.offset2
+            block primary_content
+               != page.html
+

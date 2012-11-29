@@ -1,0 +1,27 @@
+title: color()
+template: function.jade
+description: function
+
+p(lead). Set the color used when rendering. After calling @color()@ all subsequent rendering will use the specified color value. Color values must be in the range 0.0 to 1.0.
+
+h3. syntax
+
+bc(python).
+color(grey)
+color(r, g, b)
+color(r, g, b, a)
+color([r, g, b])
+color([r, g, b, a])
+
+h3. parameters
+
+| *grey* | grey-scale value |
+| *r*    | red value |
+| *g*    | green value |
+| *b*    | blue value |
+| *a*    | alpha (transparency) value |
+
+h3. returns
+
+none
+

@@ -1,0 +1,26 @@
+title: cylinder()
+template: function.jade
+description: function
+
+p(lead). Render a cylinder.
+
+h3. syntax
+
+bc(python).
+cylinder(radius, height)
+
+h3. parameters
+
+| *radius* | radius of the base of the cylinder |
+| *height* | height of the cylinder |
+
+h3. optional arguments
+
+| *style*   | "wireframe" or "solid" |
+| *texture* | "Texture":# object(s) |
+
+h3. returns
+
+none
+
+

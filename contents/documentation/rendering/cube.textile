@@ -1,0 +1,27 @@
+title: cube()
+template: function.jade
+description: function
+
+p(lead). Render a cube.
+
+h3. syntax
+
+bc(python).
+cube(size)        # single float value 
+cube(sx, sy, sz)  # multiple float values
+
+h3. parameters
+
+| *size* | size of the cube in all directions |
+| *sx*   | size of the cube in x-direction |
+| *sy*   | size of the cube in y-direction |
+| *sz*   | size of the cube in z-direction |
+
+h3. optional arguments
+
+| *style*   | "wireframe" or "solid" |
+| *texture* | "Texture":# object(s) |
+
+h3. returns
+
+none

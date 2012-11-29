@@ -1,0 +1,24 @@
+title: sphere()
+template: function.jade
+description: function
+
+p(lead). Render a sphere.
+
+h3. syntax
+
+bc(python).
+sphere(radius)  # single float value
+
+h3. parameters
+
+| *radius* | radius of the sphere |
+
+h3. optional arguments
+
+| *style* | "wireframe" or "solid" |
+
+h3. returns
+
+none
+
+

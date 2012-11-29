@@ -1,0 +1,21 @@
+!!! 5
+html(lang='en')
+   head
+      block head
+         meta(charset='utf-8')
+         title vroom | #{page.title}
+         link(rel='stylesheet', href=locals.url+'/css/bootstrap.min.css')
+         link(rel='stylesheet', href=locals.url+'/css/bootstrap-responsive.min.css')
+         link(rel='stylesheet', href=locals.url+'/css/font-awesome.css')
+         link(rel='stylesheet', href=locals.url+'/css/github.css')
+         link(rel='stylesheet', href=locals.url+'/css/style.css')
+   body
+      include includes/navbar
+      header
+         block header
+      block content
+      footer
+         include includes/footer
+      script(src=locals.url+'/js/jquery.js')
+      script(src=locals.url+'/js/bootstrap.min.js')
+
